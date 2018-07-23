@@ -1,0 +1,290 @@
+/** General Assembly Javascript Circuit July 2018 - Sabina Kayne **/
+* {
+  font-family: 'Roboto', sans-serif;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+	text-align: center; 
+  background-color: #ffffff;
+  color: #222;
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  min-height: 100px;
+  margin: 0 auto;
+  padding: 0px 1px 5px 1px;
+  border-radius: 10px;
+}
+.restaurant-pic {
+  position: relative;
+  top: 50px;
+  left: 0; 
+  height: 60vh;
+  background: url('../images/toms-restaurant.jpg');
+  background-size: cover;
+  background-position: 0 40%;
+}
+.img-div { 
+  top: 50;
+  left: 0; 
+}
+
+header {
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  color: #222;
+  background-color: #fff !important; 
+  height: 50px; 
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px 10px 0 10px; 
+  z-index: 200; 
+}
+#logo1 { 
+  position: fixed; 
+  top: 0;
+  left: 5px; 
+  float: left; 
+  text-decoration: none !important; 
+  font-weight: bold; 
+  font-variant: small-caps;
+  font-size: 24px !important;
+  color: #31698a !important; 
+}
+nav { 
+  position: fixed; 
+  top: 5px;
+  right: 5px;  
+  float: right;    
+  font-size: 18px !important;
+  text-decoration: none !important; 
+  vertical-align: text-bottom;
+} 
+
+#logo1, 
+nav { 
+  position:absolute; 
+  display: inline-block; 
+  height:auto; 
+}
+a:link  { color: #222; text-decoration: none; }
+a:hover { color: #900; text-decoration: none; }
+
+#headerNav    { margin: 0; padding: 0; }
+#headerNav li { margin: 0; padding: 0; list-style: none; float: left; margin-right: 5px; text-align: left;}
+#headerNav a  { padding: 0 10px 0 0; display: block; }
+
+#headerNav ul { /* submenu */
+  position: absolute;
+  padding: 5px 3px 3px 7px;
+  z-index: 500;
+  display: none; /* hide dropdown */
+}
+
+#headerNav ul li { float: none; margin: 5px 0 5px 0px; }
+#headerNav li:hover > ul { display: block; }  /* display submenu on hover */
+
+h1 { 
+  font-weight: bold; 
+  font-variant: small-caps;
+  font-size: 24px; 
+}
+h2 { 
+  font-weight: bold; 
+  font-variant: small-caps;
+  font-size: 20px;
+  margin-top: 50px;
+}
+h3 { 
+  font-weight: bold; 
+  font-variant: small-caps;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.section-div {
+  font-size: 12px;
+}
+.section-div::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.border-full {
+  border: 1px solid #d3d3d3;
+}
+.left-div,
+.right-div {
+    float: left;
+    width: 45%;
+    padding: 10px;
+    min-height: 300px;
+}
+.left-div {
+  margin: 0 10px 0 0;
+  float: left;
+}
+.right-div {
+  float: right;
+  margin: 0 0 0 10px;
+}
+.img-div {
+  padding: 0;
+  margin: 0;
+}
+.img-div img {
+  width: 100%;
+}
+#reservations-table {
+  text-align: center;
+  border:     1;
+  width:      90%;
+}
+table, td {
+    border: 1px solid #d3d3d3;
+    border-collapse: collapse;
+}
+#reservations-table thead td {
+  font-weight:  bold;
+  text-align:   center;
+}
+#map {
+  border: 0;
+  max-height: 300px;
+}
+.error-msg {
+  color: red;
+  font-weight: bold;
+}
+.reviews-text {
+  padding-top: 20px;
+}
+p {
+  font-size: 16px;
+  text-align: left;
+  vertical-align: middle;
+  font-style: normal;
+  font-weight: normal;
+}
+
+#footer { 
+  margin: 10px 0 10px 0; 
+  text-align: center;
+}
+
+.text-left { text-align: left; }
+.col-label { width: 25%;}
+.col-value { width: 75%;}
+  
+.col-label, 
+.col-value {
+    float: left;
+    margin:7px 0 0 0;
+    text-align: left;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+label { 
+  font-weight: 600; 
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+}
+
+#reservation-name,
+#reservation-day {
+  width: 100%;
+  max-width: 300px;
+}
+#reservations-table,
+#reservation-form {
+  margin: 0 auto;
+  width: 80%;
+}
+
+input[type=text],
+input[type=password], 
+input[type=email], 
+select, 
+textarea {
+  padding: 5px 5px;
+  margin: 5px 0;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  display: inline-block; 
+  resize: vertical;
+}
+
+input[type=submit],
+input[type=button],
+button,
+.action-button,
+.clear-button {
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #04AE58;
+  border: 1px solid #04AE58;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 8px 10px 8px 0;
+  cursor: pointer;
+  display: inline-block;
+} 
+.clear-button {
+  background-color: #ffffff;
+  color: #464646;
+}
+  
+input[type=submit]:hover,
+input[type=button]:hover,
+.action-button:hover,
+.clear-button:hover {
+  color: #04AE58;
+  background-color: #ffffff;
+  border: 1px solid #d3d3d3;
+}
+
+input[type=submit]:disabled,
+input[type=button]:disabled,
+input[type="text"]:disabled,
+.action-button:disabled,
+.clear-button:disabled {
+  background-color: #ffffff;
+  color:  #888888;
+  cursor: default;
+}
+@media screen and (max-width: 1000px) {
+header { height: 70px; padding-left: 10px; background: transparent; }
+nav    { font-size: 90%; padding-left: 13px; position: absolute; top: 0px; margin: 0; padding-top: 0px; }
+}
+@media screen and (max-width: 600px) {
+  .col-label, 
+  .col-value {
+    margin-top: 0;
+    width: 100%;
+  }
+  label {
+    margin-top: 8px;
+  }
+  input[type=text],
+  input[type=password], 
+  input[type=email], 
+  select, 
+  textarea {
+    margin: 3px 0;
+  }
+
+  .left-div,
+  .right-div {
+    float: left;
+    width: 100%;
+    margin: 0;
+}

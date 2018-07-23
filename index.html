@@ -1,12 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Sabina's Project1</title>
-	</head>
+<!doctype html>
+<html>
+<!-- General Assembly Javascript Circuit July 2018 - Sabina Kayne -->
 
-	<body>
-		<h1>Hello world !</h1>
-		
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>My Project</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<header>
+        <div id="logo1"><a href="#" id="hm">Monk's Café</a></div>
+        <nav>
+            <ul id="headerNav">
+				<li><a href="#section-reservations">Reservations</a></li>
+                <li><a href="#section-map">Map</a></li>
+            </ul>
+        </nav>
+	</header>
+
+	<div class="section-div restaurant-pic"></div>
+
+	<br>
+	<h2>Reservations</h2>
+	<div class="section-div" id="section-reservations">
+		<div class="left-div border-full">
+			<h2>Make a Reservation</h2>
+			<form id="reservation-form">
+			    <div class="row">
+					<div class="col-label">
+						<label for="reservation-name">Name</label>
+				  	</div>
+				  	<div class="col-value">
+						<input type="text" id="reservation-name" name="reservation-name">
+					</div>
+				</div>
+
+			    <div class="row">
+					<div class="col-label">
+						<label for="reservation-day">Day</label>
+				  	</div>
+				  	<div class="col-value">
+						<input type="text" id="datepicker" name="reservation-day">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-label">
+				  	</div>
+				  	<div class="col-value">
+						<button class="action-button">Confirm </button>
+						<button class="clear-button">Clear </button>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="error-msg"></div>
+				</div>
+			</form> 
+		</div>
+
+		<div class="right-div border-full">
+			<h2>Existing Reservations</h2>
+			<table id="reservations-table" border="1">
+				<thead>
+					<tr>
+						<td width="10%"></td>
+						<td width="60%">Name</td>
+						<td width="30%">Day</td>
+					</tr>
+				</thead>
+				<tbody class="existing-reservation"></tbody>
+			</table>
+		</div>
+	</div>
+
+	<br>
+	<h2>Come Dine with Us</h2>
+	<div class="section-div" id="section-map">
+        <div id="map" style="height:100vh"></div>
+	</div>
+
+	<br>
+	<h2>Customer Reviews</h2>
+	<div class="section-div"> 
+		<div class="left-div img-div"><img src="images/jerry.jpg" alt="jerry"></div>
+		<div class="right-div"><p class="reviews-text">“Big lettuce, big carrots, tomatoes like volleyballs.”<br>- Jerry Seinfeld, on The BIG Salad</p>
+		</div>
+	</div> 
+
+	<br>
+	<div id="footer">Copyright 2018 All Rights Reserved</div>
+
+	<script id="existing-reservation-template" type="text/x-handlebars-template">
+	    <tr data-id="{{reservationId}}">
+	  		<td class="text-left">{{reservationId}}</td>
+	      	<td>{{name}}</td>
+	  		<td>{{day}}</td>
+	    </tr>
+  	</script>
+
+	<script src="js/jquery-3.0.0.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+
+	<!-- Firebase -->
+  	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  
+	<script src="js/handlebars-v4.0.5.js"></script>
+	<script src="js/main.js"></script>
+    
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXG1mV_uJjc6LT0OoQSZ1LoMqqA_E2uIo&callback=initMap" type="text/javascript"></script>
+</body>
 </html>
