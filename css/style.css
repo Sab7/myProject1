@@ -149,9 +149,12 @@ table, td {
     border: 1px solid #d3d3d3;
     border-collapse: collapse;
 }
-#reservations-table thead td {
+#reservations-table thead {
   font-weight:  bold;
-  text-align:   center;
+  text-align:   left;
+}
+#reservations-table td {
+  text-align:   left;
 }
 #map {
   border: 0;

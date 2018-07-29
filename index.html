@@ -17,8 +17,8 @@
         <div id="logo1"><a href="#" id="hm">Monk's Café</a></div>
         <nav>
             <ul id="headerNav">
-				<li><a href="#section-reservations">Reservations</a></li>
-                <li><a href="#section-map">Map</a></li>
+				<li id="to_reservations"><a href="#section-reservations">Reservations</a></li>
+                <li id="to_map"><a href="#section-map">Map</a></li>
             </ul>
         </nav>
 	</header>
@@ -69,8 +69,7 @@
 			<table id="reservations-table" border="1">
 				<thead>
 					<tr>
-						<td width="10%"></td>
-						<td width="60%">Name</td>
+						<td width="70%">Name</td>
 						<td width="30%">Day</td>
 					</tr>
 				</thead>
@@ -98,7 +97,6 @@
 
 	<script id="existing-reservation-template" type="text/x-handlebars-template">
 	    <tr data-id="{{reservationId}}">
-	  		<td class="text-left">{{reservationId}}</td>
 	      	<td>{{name}}</td>
 	  		<td>{{day}}</td>
 	    </tr>
@@ -108,7 +106,7 @@
 	<script src="js/jquery-ui.min.js"></script>
 
 	<!-- Firebase -->
-  	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   
 	<script src="js/handlebars-v4.0.5.js"></script>
 	<script src="js/main.js"></script>
